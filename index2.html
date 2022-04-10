@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>“盒”中生友盲盒购物交友平台</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <script src="./public/echarts.min.js" charset="utf-8" type="text/javascript"></script>
+  <script src="./public/jquery-3.6.0.min.js" charset="utf-8" type="text/javascript"></script>
+  <script src="./public/data.js" charset="utf-8" type="text/javascript"></script>
+  <script src="./layui/layui.js" charset="utf-8" type="text/javascript"></script>
+  <link rel="stylesheet" href="./layui/css/layui.css" type="text/css">
+<style>
+  .layui-table-cell{
+    height:40px;
+    line-height: 40px;
+}
+</style>
+</head>
+<body class="layui-layout-body">
+
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo" style="font-size: 14px;">“盒”中生友盲盒购物交友平台</div>
+    <div style='width:100px;height:20px;position:fixed;right:50px;bottom:50px;z-index: 100;font-size: 14px;'>此网站仅为示意</div>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a>
+           admin
+        </a>
+      </li>
+      <li class="layui-nav-item"><a href="javascript:logout();">退出</a></li>
+
+    </ul>
+
+  </div>
+  
+  <div class="layui-side layui-bg-black"  style="width:130px">
+    <div class="layui-side-scroll"  style="width:130px">
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test"  style="width:130px">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="" style="font-size: 16px;text-align: center;height:60px;line-height:60px">产品情况</a>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="index2.html" style="font-size: 16px;text-align: center;height:60px;line-height:60px">订购盲盒</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="layui-body"  style="left:130px;padding: 10px;">
+    <div class="layui-collapse" lay-accordion style="background-color: #F2F2F2;">
+        <div class="layui-colla-item">
+          <h2 class="layui-colla-title">生活用品类盲盒</h2>
+          <div class="layui-colla-content layui-show">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">产品1</div>
+                        <div class="layui-card-body" style="width:200px;margin:0 auto">
+                          <img src="./img/1.jpg" style="width:200px"><br>
+                          <p style="margin-top:20px">售价：￥49.9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">产品2</div>
+                        <div class="layui-card-body" style="width:200px;margin:0 auto">
+                          <img src="./img/2.jpg" style="width:200px"><br>
+                          <p style="margin-top:20px">售价：￥49.9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="layui-colla-item">
+          <h2 class="layui-colla-title">玩具类盲盒</h2>
+          <div class="layui-colla-content layui-show">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">产品1</div>
+                        <div class="layui-card-body" style="width:200px;margin:0 auto">
+                          <img src="./img/4.jpg" style="width:200px;"><br>
+                          <p style="margin-top:20px">售价：￥49.9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">产品2</div>
+                        <div class="layui-card-body" style="width:200px;margin:0 auto">
+                          <img src="./img/5.jpg" style="width:200px"><br>
+                          <p style="margin-top:20px">售价：￥49.9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">产品3</div>
+                        <div class="layui-card-body" style="width:200px;margin:0 auto">
+                          <img src="./img/6.jpg" style="width:200px"><br>
+                          <p style="margin-top:20px">售价：￥49.9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="layui-colla-item">
+          <h2 class="layui-colla-title">文具类盲盒</h2>
+          <div class="layui-colla-content layui-show">
+            <div class="layui-row layui-col-space10">
+                <div class="layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header">产品1</div>
+                        <div class="layui-card-body" style="width:200px;margin:0 auto">
+                          <img src="./img/3.jpg" style="width:200px"><br>
+                          <p style="margin-top:20px">售价：￥49.9</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  <div class="layui-footer"  style="left:130px;">
+        <label>“盒”中生友项目组</label>
+  </div>
+</div>
+<script>
+    //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+      var element = layui.element;
+      
+      //…
+    });
+</script>
+</body>
+</html>
