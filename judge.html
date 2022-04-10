@@ -1,0 +1,25 @@
+<script>
+var $_GET = (function(){
+    var url = window.document.location.href.toString(); //获取的完整url
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+var name= $_GET['name'];
+var pwd= $_GET['pwd'];
+if(name == 'admin' && pwd == '123456'){
+    window.location.href="./index1.html";
+}else{
+    alert("账号或密码错误");
+    window.location.href="./index.html";
+}
+</script>
