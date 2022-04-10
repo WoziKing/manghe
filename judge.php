@@ -1,5 +1,5 @@
 <?php
-if($_POST['name']=='admin' && $_POST['pwd']=='123456'){
+if($_GET['name']=='admin' && $_GET['pwd']=='123456'){
     echo '<script>window.location.href="./index1.html";</script>';
     exit();
 }else{
