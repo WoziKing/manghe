@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>“盒”中生友盲盒购物交友平台</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <script src="./public/echarts.min.js" charset="utf-8" type="text/javascript"></script>
+  <script src="./public/jquery-3.6.0.min.js" charset="utf-8" type="text/javascript"></script>
+  <script src="./public/data.js" charset="utf-8" type="text/javascript"></script>
+  <script src="./layui/layui.js" charset="utf-8" type="text/javascript"></script>
+  <link rel="stylesheet" href="./layui/css/layui.css" type="text/css">
+<style>
+  .layui-table-cell{
+    height:40px;
+    line-height: 40px;
+}
+</style>
+</head>
+<body class="layui-layout-body">
+
+<div id="loginform" style="display:none;padding: 20px;"><form action="" class="layui-form">
+<p style="text-indent: 2em;">尊敬的用户，欢迎您使用“ 中国 电信网上营业厅”网站（网址：www.189.cn，简称“本网站”）。</p>
+<p style="text-indent: 2em;">本网站由中国电信股份有限公司 全 渠道运营中心（简称“中国电信”或“我们”）所有和运营。在登录、使用本网站之前，您应当仔细阅读、充分理解《用户服务协议》（简称“本协议”）的全部内容， 特别是本协议中以加粗字体显示的内容，您应当重点阅读。如果您不同意本协议或其中任何条款，请您立即停止登录或使用本网站；您开始登录或使用本网站，即表明您已同意本协议内容，本协议即构成对用户和中国电信（合称 “双方”）有约束力的法律文件。</p>
+<b style="text-indent: 2em;">第一条 定义</b>
+<p style="text-indent: 2em;">1.1 本网站：是指由中国电信股份有限公司 全 渠道运营中心所有并负责运营的“电信网上营业厅”网站（网址：www.189.cn）。</p>
+<p style="text-indent: 2em;">1.2 所有权以及相关的权利：在本协议中是指：第一，所有权；第二，知识产权，包括但不限于著作权、专利权、商标权、商业秘密等；第三，除上述权利之外的对物、信息及其载体和表现形式的使用、利用、传播、复制、发行、编辑、修改、处分等权利。</p>
+<p style="text-indent: 2em;">1.3 用户：是指接受本网站服务的自然人、法人或其他组织。</p>
+<p style="text-indent: 2em;">1.4 个人信息：在本协议中，是指 以电子或者其他方式记录的与已识别或者可识别的自然人有关的各种信息，不包括匿名化处理后的信息。</p>
+<p style="text-indent: 2em;">1.5 网络服务：是指本网站基于互联网方式向用户提供的业务宣传、业务查询、业务办理、交费充值、商品交易、用户关怀、营销活动等服务。</p>
+<p style="text-indent: 2em;">1.6 基础电信服务：是指中国电信向用户提供的公共网络基础设施、公共数据传送、基本话音通信服务等服务，包括但不限于移动通信服务、宽带服务等。</p>
+<p style="text-indent: 2em;">1.7 平台内经营者：是指除中国电信以外的、通过本网站销售商品或者提供服务的第三方经营者。</p>
+<b style="text-indent: 2em;">第二条 网络服务内容</b>
+<p style="text-indent: 2em;">2.1 本网站向用户提供的网络服务包括：</p>
+<p style="text-indent: 2em;">(1)用户注册、登录、安全退出、找回密码、修改密码、基本资料修改、历史订单查询等服务；</p>
+<p style="text-indent: 2em;">(2)电信业务查询、业务办理、充值缴费等服务；</p>
+<p style="text-indent: 2em;">(3)商品交易服务；</p>
+<p style="text-indent: 2em;">(4)对本网站用户进行消息推送，通过10001666、106598731、10659865等端口短信消息进行的通信费、使用量阈值提醒及用户关怀、营销活动等通知服务；</p>
+<p style="text-indent: 2em;">(5)本网站为用户提供的其他服务。</p>
+<p style="text-indent: 2em;">2.2 本网站有权根据情况变化调整网络服务的具体内容，本网站服务内容进行调整的，中国电信无需另行通知用户，调整后的内容一经发布即自动生效。如用户不同意上述调整，应当立即停止使用服务；如用户继续使用服务，视为用户同意调整后的内容并同意遵守。</p>
+<p style="text-indent: 2em;">2.3 本网站仅提供服务，与服务有关的通信设备（包括但不限于电脑终端、手机终端、调制解调器及其他与接入互联网有关的装置）及通信服务所需的费用（包括但不限于为接入互联网而支付的电话费及宽带费）由用户自行承担。</p>
+<p style="text-indent: 2em;">2.4 用户使用本网站提供的具体服务时，应当满足相应的前提条件、具备相应的服务使用权限。用户不满足使用服务的前提条件、不具备服务使用权限的，无法使用相应服务。</p>
+<p style="text-indent: 2em;">2.5 用户使用本网站提供的基础电信服务的，应当同时遵守用户与中国电信及/或关联公司另行签订的相应服务协议。</p>
+<b style="text-indent: 2em;">第三条 用户账号管理</b>
+<p style="text-indent: 2em;">3.1 用户确认，用户注册、登录以及实际使用本网站提供的服务时，应当是具备完全民事权利能力和完全民事行为能力的自然人、法人或其他组织。 若用户是未成年人，必须在征得父母或其他监护人同意的前提下使用本网站提供的服务。若用户是未满 14 周岁的未成年人，必须在取得父母或其他监护人对《儿童个人信息保护政策及监护人须知》的同意后，才可以在监护人的指导下使用本提供的服务。 如用户不具备前述主体资格，则用户及用户的监护人应当依照法律规定承担因此而导致的一切后果，中国电信有权注销或永久冻结用户的账户。</p>
+<p style="text-indent: 2em;">3.2 用户可以使用中国电信手机号码、宽带账号等作为本网站账号、登录本网站。用户也可以按照本网站要求的程序进行注册，获得在本网站的账号，登录本网站；按照本注册程序获得本网站账号的用户，可以在登录后通过“我的欢go”进行注册信息的变更及注销。用户也可以按照本网站要求的程序、使用用户拥有的其他第三方平台账号登录本网站。</p>
+<p style="text-indent: 2em;">3.3 用户使用具体服务时，本网站可能会要求用户完成进一步激活或验证流程，用户应当按照相应页面的提示提供身份信息及资料，并应保证提供的身份信息及资料真实、及时、完整和准确。</p>
+<p style="text-indent: 2em;">3.4 用户在本网站的账号、密码、短信随机验证码等是用户在本网站的唯一身份权证。为享受本网站提供的网络服务，用户应当按照对应的服务要求键入正确的用户账号及密码或短信验证码或其他身份信息。</p>
+<p style="text-indent: 2em;">3.5 用户应妥善保管用户账号、密码和手机短信验证码，避免使用过于简单的密码。用户在服务使用过程中可以根据本网站规定更改密码。用户账号和密码不得出借、转让、继承或者赠与。因非本网站原因导致用户的账号、密码遗失、遗忘或被他人窃取的，本网站不承担责任。如果用户发现自己的个人信息泄密，尤其是本网站账户及密码发生泄露，请立即联络中国电信。</p>
+<p style="text-indent: 2em;">3.6 用户通过账号、密码和/或手机短信验证码登录后使用本网站的行为，均视为用户本人行为，用户应当承担由此导致的相关后果和责任。</p>
+<p style="text-indent: 2em;">3.7 用户登录后，可以设置用户在本网站的昵称。用户账号、昵称应当符合法律法规规定，不得违反法律法规规定、侵犯或涉嫌侵犯他人合法权益，否则，中国电信有权暂停或终止提供本网站的所有服务，并冻结用户账号。</p>
+    <div class="layui-form-item" style="margin-top:20px;">
+        <label style="position: relative;top:5px">我已阅读隐私保密协议并确认</label>
+
+          <input type="checkbox" name="like[]" lay-skin="primary">
+
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+        </div>
+    </div></form>
+</div>
+
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo" style="font-size: 16px;">“盒”中生友</div>
+    <div style='width:100px;height:20px;position:fixed;right:50px;bottom:50px;z-index: 100;font-size: 14px;'>此网站仅为示意</div>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a>
+           admin
+        </a>
+      </li>
+      <li class="layui-nav-item"><a href="javascript:logout();">退出</a></li>
+
+    </ul>
+
+  </div>
+  
+  <div class="layui-side layui-bg-black"  style="width:130px">
+    <div class="layui-side-scroll"  style="width:130px">
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test"  style="width:130px">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a href="" style="font-size: 16px;text-align: center;height:60px;line-height:60px">产品情况</a>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="" style="font-size: 16px;text-align: center;height:60px;line-height:60px">订购盲盒</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="layui-body"  style="left:130px">
+
+
+</div>
+  <div class="layui-footer"  style="left:130px">
+        <label>“盒”中生友项目组</label>
+  </div>
+</div>
+<script>
+var $_GET = (function(){
+    var url = window.document.location.href.toString(); //获取的完整url
+    var u = url.split("?");
+    if(typeof(u[1]) == "string"){
+        u = u[1].split("&");
+        var get = {};
+        for(var i in u){
+            var j = u[i].split("=");
+            get[j[0]] = j[1];
+        }
+        return get;
+    } else {
+        return {};
+    }
+})();
+
+var get= $_GET['like%5B0%5D'];
+
+console.log(get);
+if(get != 'on'){
+    layui.use('layer', function(){
+    var layer=layui.layer;
+            layer.open({
+                title: "隐私保密协定"
+                ,shadeClose:true
+                ,closeBtn: 1
+                ,type:1
+                ,shade: 0.3
+                ,area:['700px', '500px']
+                ,content: $("#loginform"),
+            });
+    });
+    layui.use('form', function(){
+      var form = layui.form;
+      form.on('submit(formDemo)', function(data){
+        if(data.field["like[0]"]==null){
+            return false;
+        }
+      });
+    });
+}
+</script>
+</body>
+</html>

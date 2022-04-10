@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>“盒”中生友盲盒购物交友平台</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="./public/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./public/css/reset.css">
+</head>
+<body>
+
+<div id="particles-js">
+		<div class="login">
+            <div style='width:100px;height:20px;position:fixed;right:50px;bottom:50px;z-index: 100;font-size: 14px;'>此网站仅为示意</div>
+			<div style="font-size: 20px;margin-top:50px;padding-left:36px;box-sizing:border-box;color:#000;margin-bottom:20px;">
+                “盒”中生友盲盒购物交友平台
+            </div>
+            <div style="font-size: 18px;margin-top:60px;padding-left:38px;color:#555;margin-bottom:40px;">
+                登录
+            </div>
+			<form action="./judge.php" method="POST">
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="./public/img/name.png"></div>
+				<div class="login-center-input">
+					<input type="text" name="name" value="" placeholder="请输入您的账号" onfocus="this.placeholder=&#39;&#39;" onblur="this.placeholder=&#39;请输入您的账号&#39;">
+					<div class="login-center-input-text">账号</div>
+				</div>
+			</div>
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="./public/img/password.png"></div>
+				<div class="login-center-input">
+					<input type="password" name="pwd" value="" placeholder="请输入您的密码" onfocus="this.placeholder=&#39;&#39;" onblur="this.placeholder=&#39;请输入您的密码&#39;">
+					<div class="login-center-input-text">密码</div>
+				</div>
+			</div>
+			<div style="text-align:center;">
+				<input type="submit" style="width:250px;height:40px;border:none;background-color:dodgerblue;margin:0 auto;color:white;" value="登录" id="login">
+                <input type="button" style="width:250px;height:40px;border:none;background-color:dodgerblue;margin:0 auto;color:white;margin-top: 20px;" value="注册" id="login">
+			</div>
+			</form>
+		</div>
+		<div class="sk-rotating-plane"></div>
+</div>
+
+</body>
+</html>
